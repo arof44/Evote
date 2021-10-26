@@ -57,8 +57,7 @@ CREATE TABLE `tbl_akses` (
 INSERT INTO `tbl_akses` (`nim`, `kode_akses`, `level`) VALUES
 ('0000', '0000', 'admin');
 
--- --------------------------------------------------------
-
+--
 --
 -- Table structure for table `tbl_dpt`
 --
