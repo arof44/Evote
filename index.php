@@ -106,7 +106,7 @@ if (isset($_POST['login'])) {
 						<span class="txt1">
 						</span>
 						<a class="txt2" href="#">
-							<p>&copy;Politeknik Negeri Malang <?php echo date('Y') ?></p>
+							<p>&copy;Jefry Alfonso <?php echo date('Y') ?></p>
 						</a>
 					</div>
 

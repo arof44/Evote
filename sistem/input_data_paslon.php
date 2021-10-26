@@ -223,7 +223,7 @@ if(isset($_POST['simpan'])) {
 <div class="footer">
   <div class="row">
     <div class="col-lg-12" >
-      &copy; Politeknik Negeri Malang  <?php echo date('Y') ?> <a href="http://binarytheme.com" style="color:#fff;" target="_blank"></a>
+      &copy; Jefry Alfonso  <?php echo date('Y') ?> <a href="http://binarytheme.com" style="color:#fff;" target="_blank"></a>
     </div>
   </div>
 </div>
