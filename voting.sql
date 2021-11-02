@@ -65,6 +65,8 @@ INSERT INTO `tbl_akses` (`nim`, `kode_akses`, `level`) VALUES
 CREATE TABLE `tbl_dpt` (
   `nim` varchar(9) NOT NULL,
   `nama_mhs` varchar(100) NOT NULL,
+  `fakultas` varchar(100) NOT NULL,
+  `semester` varchar(100) NOT NULL,
   `status` varchar(30) NOT NULL,
   `waktu` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

@@ -28,6 +28,8 @@ for ($i=2; $i<=$jumlah_baris; $i++){
 	// menangkap data dan memasukkan ke variabel sesuai dengan kolumnya masing-masing
 	$nim     = $data->val($i, 1);
 	$nama_mhs   = $data->val($i, 2);
+	$fakultas   = $data->val($i, 2);
+	$semester   = $data->val($i, 2);
 	$status   = $data->val($i, 3);
 	$waktu   = $data->val($i, 3);
  
