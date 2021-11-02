@@ -142,26 +142,26 @@ $no_urut= mysqli_real_escape_string($koneksi, $_POST['no_urut']);
                 <div class="col-lg-12">
                   <h2><i class="fa fa-user"> Upload DPT</i></h2>
                   <form action="" method="post" enctype="multipart/form-data">
-            <div class="form-group">
-              <label>NIM</label>
-              <input type="text" name="nim_mhs" required="required" class="form-control">
-            </div>
-            <div class="form-group">
-              <label>Nama</label>
-              <input type="text" name="nm_mhs" required="required" autocomplete="off" class="form-control">
-            </div>
-            <div class="form-group">
-              <label>Falkultas</label>
-              <input type="text" name="falkultas" required="required" class="form-control">
-            </div>
-            <div class="form-group">
-              <label>Semester</label>
-              <input type="text" name="semester" required="required" autocomplete="off" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="submit" class="btn btn-success" name="simpan" value="Input" class="form-control">
-            </div>
-          </form>   
+                      <div class="form-group">
+                        <label>NIM</label>
+                        <input type="text" name="nim_mhs" required="required" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label>Nama</label>
+                        <input type="text" name="nm_mhs" required="required" autocomplete="off" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label>Falkultas</label>
+                        <input type="text" name="falkultas" required="required" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label>Semester</label>
+                        <input type="text" name="semester" required="required" autocomplete="off" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <input type="submit" class="btn btn-success" name="simpan" value="Input" class="form-control">
+                      </div>
+                  </form>   
                 </div>
               </div>
 
