@@ -14,7 +14,7 @@ include '../koneksi.php';
 
     if (mysqli_query($koneksi,$sql)) {
         echo "<script>window.alert('Berhasil Upload')
-        window.location='buat_akses.php'</script>";
+        window.location='upload_dpt.php'</script>";
         $berhasil++;
     } else {
         echo "coba lagi";
