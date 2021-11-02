@@ -26,19 +26,24 @@ $berhasil = 0;
 for ($i=2; $i<=$jumlah_baris; $i++){
  
 	// menangkap data dan memasukkan ke variabel sesuai dengan kolumnya masing-masing
-	$nim     = $data->val($i, 1);
+	$nim     	= $data->val($i, 1);
 	$nama_mhs   = $data->val($i, 2);
 	$fakultas   = $data->val($i, 3);
 	$semester   = $data->val($i, 4);
-	$status   = $data->val($i, 5);
-	$waktu   = $data->val($i, 5);
+	$status   	= $data->val($i, 5);
+	$waktu   	= $data->val($i, 5);
+	$level		= "";
  
 	if($nim != "" && $nama_mhs != "" && $status != "" && $waktu != "" ){
 		// input data ke database (table data_pegawai)
 		mysqli_query($koneksi,"INSERT INTO tbl_dpt values('$nim','$nama_mhs','$fakultas','$semester','$status','$waktu')");
+		mysqli_query($koneksi,"INSERT INTO tbl_akses values('$nim','$nim','$level')");
+		
 		$berhasil++;
 	}
 }
+
+
  
 // hapus kembali file .xls yang di upload tadi
 unlink($_FILES['file_dpt']['name']);

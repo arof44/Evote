@@ -118,10 +118,6 @@ if(isset($_POST['simpan'])) {
             </li>
 
             <li>
-              <a href="buat_akses.php"><i class="fa fa-lightbulb-o "></i>Buat Akses </a>
-            </li>
-
-            <li>
               <a href="hasil_suara.php"><i class="fa fa-trophy"></i>Hasil Suara </a>
             </li>
 

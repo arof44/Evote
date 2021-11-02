@@ -8,11 +8,15 @@ include '../koneksi.php';
 	$semester   = $_GET['semester'];
     $stat       = "Belum Memilih";
     $berhasil   = 0;
+    $level      = "";
+
+    $akses = "INSERT INTO tbl_akses (nim, kode_akses, level)
+    VALUE ('$nim', '$nim', '$level')";
 
     $sql = "INSERT INTO tbl_dpt (nim, nama_mhs, fakultas, semester, status)
             VALUE ('$nim', '$nama_mhs', '$fakultas', '$semester', '$stat')";
 
-    if (mysqli_query($koneksi,$sql)) {
+    if (mysqli_query($koneksi,$sql) && mysqli_query($koneksi, $akses)) {
         echo "<script>window.alert('Berhasil Upload')
         window.location='upload_dpt.php'</script>";
         $berhasil++;
@@ -20,4 +24,5 @@ include '../koneksi.php';
         echo "coba lagi";
     }
     header("location:upload_dpt.php?berhasil=$berhasil");
+    
 ?>
