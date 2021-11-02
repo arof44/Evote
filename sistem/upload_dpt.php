@@ -144,11 +144,11 @@ $no_urut= mysqli_real_escape_string($koneksi, $_POST['no_urut']);
                   <form action="" method="post" enctype="multipart/form-data">
                       <div class="form-group">
                         <label>NIM</label>
-                        <input type="text" name="nim_mhs" required="required" class="form-control">
+                        <input type="text" name="nim" required="required" class="form-control">
                       </div>
                       <div class="form-group">
                         <label>Nama</label>
-                        <input type="text" name="nm_mhs" required="required" autocomplete="off" class="form-control">
+                        <input type="text" name="nama_mhs" required="required" autocomplete="off" class="form-control">
                       </div>
                       <div class="form-group">
                         <label>Falkultas</label>
@@ -200,6 +200,8 @@ $no_urut= mysqli_real_escape_string($koneksi, $_POST['no_urut']);
                           <tr>
                               <td><?php echo $d['nim']; ?></td>
                               <td style="text-transform: capitalize;"><?php echo $d['nama_mhs']; ?></td>
+                              <td style="text-transform: capitalize;"><?php echo $d['fakultas']; ?></td>
+                              <td style="text-transform: capitalize;"><?php echo $d['semester']; ?></td>
                               <td><mark style="background-color: yellow;"><b><?php echo $d['status']; ?></b></mark></td>
                           </tr>
                             <?php } ?>

@@ -28,14 +28,14 @@ for ($i=2; $i<=$jumlah_baris; $i++){
 	// menangkap data dan memasukkan ke variabel sesuai dengan kolumnya masing-masing
 	$nim     = $data->val($i, 1);
 	$nama_mhs   = $data->val($i, 2);
-	$fakultas   = $data->val($i, 2);
-	$semester   = $data->val($i, 2);
-	$status   = $data->val($i, 3);
-	$waktu   = $data->val($i, 3);
+	$fakultas   = $data->val($i, 3);
+	$semester   = $data->val($i, 4);
+	$status   = $data->val($i, 5);
+	$waktu   = $data->val($i, 5);
  
 	if($nim != "" && $nama_mhs != "" && $status != "" && $waktu != "" ){
 		// input data ke database (table data_pegawai)
-		mysqli_query($koneksi,"INSERT INTO tbl_dpt values('$nim','$nama_mhs','$status','$waktu')");
+		mysqli_query($koneksi,"INSERT INTO tbl_dpt values('$nim','$nama_mhs','$fakultas','$semester','$status','$waktu')");
 		$berhasil++;
 	}
 }
