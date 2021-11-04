@@ -1,7 +1,10 @@
 <?php
 session_start();
 include 'koneksi.php';
-
+?>
+<script src="js/main.js"></script>
+<script src="js/sweetalert.min.js"></script>
+<?php
 if (isset($_POST['login'])) {
 	$kode_akses = mysqli_real_escape_string($koneksi, $_POST['kode_akses']);
 	$data_akses = mysqli_query($koneksi, "SELECT * FROM tbl_akses WHERE kode_akses='$kode_akses'");
@@ -18,7 +21,7 @@ if (isset($_POST['login'])) {
 		$_SESSION['level'] = $level;
 		header('location:sistem');
 	} else {
-		echo "<script type='text/javascript'>
+		echo "<script>
 		setTimeout(function () {
 			swal({
 				title: 'Kode Akses Salah',
@@ -29,8 +32,8 @@ if (isset($_POST['login'])) {
 				},10);
 				window.setTimeout(function(){
 					window.location.replace('index.php');
-					},3000);
-					</script>";
+					},2500);
+			</script>";
 	}
 }
 ?>

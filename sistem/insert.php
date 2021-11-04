@@ -7,14 +7,15 @@ include '../koneksi.php';
 	$fakultas   = $_GET['fakultas'];
 	$semester   = $_GET['semester'];
     $stat       = "Belum Memilih";
+    $waktu      = "Belum Memilih";
     $berhasil   = 0;
     $level      = "";
 
     $akses = "INSERT INTO tbl_akses (nim, kode_akses, level)
     VALUE ('$nim', '$nim', '$level')";
 
-    $sql = "INSERT INTO tbl_dpt (nim, nama_mhs, fakultas, semester, status)
-            VALUE ('$nim', '$nama_mhs', '$fakultas', '$semester', '$stat')";
+    $sql = "INSERT INTO tbl_dpt (nim, nama_mhs, fakultas, semester, status, waktu)
+            VALUE ('$nim', '$nama_mhs', '$fakultas', '$semester', '$stat', '$waktu')";
 
     if (mysqli_query($koneksi,$sql) && mysqli_query($koneksi, $akses)) {
         echo "<script>window.alert('Berhasil Upload')

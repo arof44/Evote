@@ -18,7 +18,7 @@ if(isset($_POST['simpan'])) {
     echo"<script>window.alert('Anda tidak bisa melakukan voting lagi')
           window.location='index.php'</script>";
         }else {
-          mysqli_query($koneksi, "UPDATE tbl_dpt SET status='(Sudah Memilih)', waktu='$waktu' WHERE nim='$nim'");
+          mysqli_query($koneksi, "UPDATE tbl_dpt SET status='Sudah Memilih', waktu='$waktu' WHERE nim='$nim'");
           mysqli_query($koneksi,"INSERT INTO tbl_paslon(kode_akses, nomor_paslon)
             VALUES ('$kode_akses','$nomor_paslon')");
 
@@ -171,7 +171,6 @@ if(isset($_POST['simpan'])) {
                         </table>
                       </div>
                     <?php } ?>
-                    
                     <input style="color: white; font-size: 20px; padding: 10px; border-radius: 15px; width: 100%;" type="submit" name="simpan" value="Vote" class="btn btn-success" onclick="return confirm('YAKIN DENGAN PILIHAN ANDA')">
                   </form>
                 </div>

@@ -179,19 +179,6 @@ if (isset($_POST['simpan'])) {
                 <input type="text" name="semester" required="required" autocomplete="off" class="form-control">
               </div>
               <div class="form-group">
-                <label>Status</label><br>
-                <select name="stat">
-                  <option>Belum Memilih</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label>Waktu</label><br>
-                <select name="waktu">
-                  <option>-</option>
-                </select>
-              </div>
-
-              <div class="form-group">
                 <input type="submit" class="btn btn-success" name="simpan" value="Input" class="form-control">
               </div>
             </form>
@@ -232,17 +219,17 @@ if (isset($_POST['simpan'])) {
                       <th>Nim</th>
                       <th>Nama</th>
                       <th>Status</th>
-                      <!--<th>Waktu</th>-->
+                      <th>Waktu</th>
                     </tr>
                     <?php
-                    $data_dpt = mysqli_query($koneksi, "SELECT * FROM tbl_dpt WHERE status='(Sudah memilih)'");
+                    $data_dpt = mysqli_query($koneksi, "SELECT * FROM tbl_dpt WHERE status='Sudah memilih'");
                     while ($d = mysqli_fetch_array($data_dpt)) {
                     ?>
                       <tr>
                         <td><?php echo $d['nim']; ?></td>
                         <td><?php echo $d['nama_mhs']; ?></td>
                         <td><mark style="background-color: #00cc00; color: white;"><b><?php echo $d['status']; ?></b></mark></td>
-                        <!--<td><?php echo $d['waktu']; ?>-->
+                        <td><?php echo $d['waktu']; ?>
                         </td>
                       </tr>
                     <?php } ?>
