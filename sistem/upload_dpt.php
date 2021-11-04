@@ -140,7 +140,7 @@ if (isset($_POST['simpan'])) {
           <div class="col-lg-12">
             <h2><i class="fa fa-user"> Upload DPT</i></h2>
 
-            
+
           </div>
         </div>
 

@@ -25,5 +25,4 @@ include '../koneksi.php';
         echo "coba lagi";
     }
     header("location:upload_dpt.php?berhasil=$berhasil");
-    
 ?>

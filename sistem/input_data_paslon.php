@@ -234,8 +234,5 @@ if(isset($_POST['simpan'])) {
 <!-- CUSTOM SCRIPTS -->
 <script src="assets/js/custom.js"></script>
 
-
-
-
 </body>
 </html>

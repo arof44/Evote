@@ -1731,7 +1731,4 @@ class Spreadsheet_Excel_Reader {
 		}
 		return $value;
 	}
-
 }
-
-?>
