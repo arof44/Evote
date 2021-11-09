@@ -151,6 +151,7 @@ if (isset($_POST['simpan'])) {
               echo "<p>" . $_GET['berhasil'] . " Data DPT berhasil di Upload</p>";
             }
             ?>
+            <h3>Input Data Kelompok</h3>
             <form action="aksi_upload_dpt.php" method="post" enctype="multipart/form-data">
               <div class="form-group">
                 <label><b>Format file xls</b></label>
@@ -161,52 +162,28 @@ if (isset($_POST['simpan'])) {
               </div>
             </form>
 
+            <h3>Input Data Perorangan</h3>
             <form action="insert.php" method="GET" enctype="multipart/form-data">
-              <div class="form-group">
+              <div>
                 <label>NIM</label>
                 <input type="text" name="nim" required="required" class="form-control">
               </div>
-              <div class="form-group">
+              <div>
                 <label>Nama</label>
                 <input type="text" name="nama_mhs" required="required" autocomplete="off" class="form-control">
               </div>
-              <div class="form-group">
-                <label>Falkultas</label>
+              <div>
+                <label>Fakultas</label>
                 <input type="text" name="fakultas" required="required" class="form-control">
               </div>
-              <div class="form-group">
+              <div>
                 <label>Semester</label>
                 <input type="text" name="semester" required="required" autocomplete="off" class="form-control">
-              </div>
+              </div><br>
               <div class="form-group">
                 <input type="submit" class="btn btn-success" name="simpan" value="Input" class="form-control">
               </div>
             </form>
-
-            <h3>Data DPT Belum memilih</h3>
-            <div class="table-responsive">
-              <table class="table table-striped table-bordered table-hover">
-                <tr>
-                  <th>Nim</th>
-                  <th>Nama</th>
-                  <th>Falkultas</th>
-                  <th>Semester</th>
-                  <th>Status</th>
-                </tr>
-                <?php
-                $data_dpt = mysqli_query($koneksi, "SELECT * FROM tbl_dpt WHERE status='Belum memilih'");
-                while ($d = mysqli_fetch_array($data_dpt)) {
-                ?>
-                  <tr>
-                    <td><?php echo $d['nim']; ?></td>
-                    <td style="text-transform: capitalize;"><?php echo $d['nama_mhs']; ?></td>
-                    <td style="text-transform: capitalize;"><?php echo $d['fakultas']; ?></td>
-                    <td style="text-transform: capitalize;"><?php echo $d['semester']; ?></td>
-                    <td><mark style="background-color: yellow;"><b><?php echo $d['status']; ?></b></mark></td>
-                  </tr>
-                <?php } ?>
-              </table>
-            </div>
           </div>
 
           <div class="col-lg-6">
@@ -237,29 +214,56 @@ if (isset($_POST['simpan'])) {
                 </div>
               </div>
             </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <h3>Data DPT Belum memilih</h3>
+                <div class="table-responsive">
+                  <table class="table table-striped table-bordered table-hover">
+                    <tr>
+                      <th>Nim</th>
+                      <th>Nama</th>
+                      <th>Falkultas</th>
+                      <th>Semester</th>
+                      <th>Status</th>
+                    </tr>
+                    <?php
+                    $data_dpt = mysqli_query($koneksi, "SELECT * FROM tbl_dpt WHERE status='Belum memilih'");
+                    while ($d = mysqli_fetch_array($data_dpt)) {
+                    ?>
+                      <tr>
+                        <td><?php echo $d['nim']; ?></td>
+                        <td style="text-transform: capitalize;"><?php echo $d['nama_mhs']; ?></td>
+                        <td style="text-transform: capitalize;"><?php echo $d['fakultas']; ?></td>
+                        <td style="text-transform: capitalize;"><?php echo $d['semester']; ?></td>
+                        <td><mark style="background-color: yellow;"><b><?php echo $d['status']; ?></b></mark></td>
+                      </tr>
+                    <?php } ?>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="footer">
+        <div class="row">
+          <div class="col-lg-12">
+            &copy; Jefry Alfonso <?php echo date('Y') ?> <a href="http://binarytheme.com" style="color:#fff;" target="_blank"></a>
           </div>
         </div>
       </div>
     </div>
 
-
-    <div class="footer">
-      <div class="row">
-        <div class="col-lg-12">
-          &copy; Jefry Alfonso <?php echo date('Y') ?> <a href="http://binarytheme.com" style="color:#fff;" target="_blank"></a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- /. WRAPPER  -->
-  <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
-  <!-- JQUERY SCRIPTS -->
-  <script src="assets/js/jquery-1.10.2.js"></script>
-  <!-- BOOTSTRAP SCRIPTS -->
-  <script src="assets/js/bootstrap.min.js"></script>
-  <!-- CUSTOM SCRIPTS -->
-  <script src="assets/js/custom.js"></script>
+    <!-- /. WRAPPER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <script src="assets/js/custom.js"></script>
 
 </body>
 
