@@ -219,7 +219,7 @@ if (isset($_POST['simpan'])) {
                       <th>Nim</th>
                       <th>Nama</th>
                       <th>Status</th>
-                      <th>Waktu</th>
+                      <th>Waktu Memilih</th>
                     </tr>
                     <?php
                     $data_dpt = mysqli_query($koneksi, "SELECT * FROM tbl_dpt WHERE status='Sudah memilih'");
