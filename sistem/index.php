@@ -5,8 +5,8 @@ if (!isset($_SESSION["login"])) {
   exit;
 }
 ?>
-<script src= js/main.js></script>
-<script src= js/sweetalert.min.js></script>
+<script src=js/main.js></script>
+<script src=js/sweetalert.min.js></script>
 <?php
 include '../koneksi.php';
 
@@ -19,7 +19,7 @@ if (isset($_POST['simpan'])) {
 
   $cek = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM tbl_paslon WHERE kode_akses='$kode_akses'"));
   if ($cek > 0) {
-     echo "<script>
+    echo "<script>
 		setTimeout(function () {
 			swal({
 				title: 'Anda Tidak Bisa Melakukan Voting',
@@ -135,6 +135,10 @@ if (isset($_POST['simpan'])) {
                 <a href="hasil_suara.php"><i class="fa fa-trophy"></i>Hasil Suara </a>
               </li>
 
+            <?php } else { ?>
+              <li>
+                <a href="ubah_password.php"><i class="fa fa-user "></i>Ubah Password</a>
+              </li>
             <?php } ?>
             <li>
               <a href="../logout.php"><i class="fa fa-circle-o-notch "></i>Logout</a>
