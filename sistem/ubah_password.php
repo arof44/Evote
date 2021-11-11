@@ -4,7 +4,7 @@ if (!isset($_SESSION["login"])) {
     header("location:../index.php");
     exit;
 }
-include '../koneksi.php';
+
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -21,6 +21,7 @@ include '../koneksi.php';
     <link href="assets/css/custom.css" rel="stylesheet" />
     <!-- GOOGLE FONTS-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
     <style type="text/css">
         img {
             width: 100%;
@@ -80,7 +81,6 @@ include '../koneksi.php';
         </nav>
         <!-- /. NAV SIDE  -->
 
-
         <div id="page-wrapper">
             <div id="page-inner">
                 <div class="row">
@@ -91,18 +91,19 @@ include '../koneksi.php';
 
                 <div class="row">
                     <div class="col-lg-6">
-                        <form action="" method="post">
+                        <form action="aksi_ubah_password.php" method="post">
                             <div class="form-group">
-                                <label>Password Baru</label>
-                                <input type="text" name="password" required="required" placeholder="Masukan Password Baru" class="form-control" autocomplete="off">
+                                <label>Password Baru
+
+                                </label>
+                                <input type="password" name="passwordBaru" required="required" placeholder="Masukan Password Baru" class="form-control" autocomplete="off">
                             </div>
                             <div class="form-group">
-                                <input type="submit" class="btn btn-primary" name="akses" value="Filter" class="form-control">
+                                <input type="submit" class="btn btn-primary" name="ganti" value="Ganti" class="form-control">
                             </div>
                         </form>
                     </div>
                 </div>
-
                 <!-- /. ROW  -->
             </div>
             <!-- /. PAGE INNER  -->
@@ -125,6 +126,22 @@ include '../koneksi.php';
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- CUSTOM SCRIPTS -->
     <script src="assets/js/custom.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var ses = '<?php echo $_SESSION['ubah_pass'] ?>';
+            if (ses != null) {
+                swal({
+                    title: 'Password berhasil diubah',
+                    type: 'success',
+                    timer: 3200,
+                    showConfirmButton: false
+                });
+                <?php $_SESSION['ubah_pass'] = null; ?>
+            }
+        });
+    </script>
 </body>
 
 </html>

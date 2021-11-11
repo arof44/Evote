@@ -245,13 +245,11 @@ if (isset($_POST['simpan'])) {
           </div>
         </div>
       </div>
-
-
-      <div class="footer">
-        <div class="row">
-          <div class="col-lg-12">
-            &copy; Jefry Alfonso <?php echo date('Y') ?> <a href="http://binarytheme.com" style="color:#fff;" target="_blank"></a>
-          </div>
+    </div>
+    <div class="footer">
+      <div class="row">
+        <div class="col-lg-12">
+          &copy; Jefry Alfonso <?php echo date('Y') ?> <a href="http://binarytheme.com" style="color:#fff;" target="_blank"></a>
         </div>
       </div>
     </div>
