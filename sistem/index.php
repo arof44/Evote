@@ -206,7 +206,10 @@ if (isset($_POST['simpan'])) {
                               </td>
                             </tr>
                             <tr>
-                              <td colspan="2" style="text-align: center; padding: 20px; background-color: gray;"><input type="radio" required="required" name="nomor_paslon" value="<?php echo $d['no_urut']; ?>"></td>
+                              <td colspan="2" style="text-align: center; padding: 20px; background-color: gray;">
+                                <input type="radio" required="required" name="nomor_paslon" value="<?php echo $d['no_urut']; ?>">
+                                <h4 style="color:#fff; font-weight:bold">PILIH</h4>
+                              </td>
                             </tr>
                           </table>
                         </div>
