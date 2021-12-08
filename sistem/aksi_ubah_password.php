@@ -14,26 +14,14 @@ if (isset($_POST['ganti'])) {
 	$ubahPass = "UPDATE tbl_akses SET kode_akses = '$passwordBaru' WHERE nim = '$nim'";
 
 	mysqli_query($koneksi, $ubahPass);
-	// echo "<script>
-	// 	setTimeout(function () {
-	// 		swal({
-	// 			title: 'Voting berhasil',
-	// 			type: 'success',
-	// 			timer: 3200,
-	// 			showConfirmButton: false
-	// 			});
-	// 			},10);
-	// 			window.setTimeout(function(){
-	// 				window.location.replace('ubah_password.php');
-	// 				},2500);
-	// 		</script>";
+	
 	$_SESSION['ubah_pass'] = $passwordBaru;
 	header("location:../sistem/ubah_password.php");
 } else {
 	echo "<script>
 		setTimeout(function () {
 			swal({
-				title: 'Voting berhasil',
+				title: 'Gagal',
 				type: 'success',
 				timer: 3200,
 				showConfirmButton: false

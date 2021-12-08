@@ -4,7 +4,6 @@ if (!isset($_SESSION["login"])) {
     header("location:../index.php");
     exit;
 }
-
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -36,7 +35,6 @@ if (!isset($_SESSION["login"])) {
 </head>
 
 <body>
-
     <div id="wrapper">
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="adjust-nav">
@@ -58,6 +56,7 @@ if (!isset($_SESSION["login"])) {
                 </span>
             </div>
         </div>
+
         <!-- /. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
@@ -143,5 +142,4 @@ if (!isset($_SESSION["login"])) {
         });
     </script>
 </body>
-
 </html>

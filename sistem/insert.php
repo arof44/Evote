@@ -19,34 +19,18 @@ $akses = "INSERT INTO tbl_akses (nim, kode_akses, level)
 $sql = "INSERT INTO tbl_dpt (nim, nama_mhs, fakultas, semester, status, waktu)
             VALUE ('$nim', '$nama_mhs', '$fakultas', '$semester', '$stat', '$waktu')";
 
-if (mysqli_query($koneksi, $sql) && mysqli_query($koneksi, $akses)) {
-    echo "<script>
-		setTimeout(function () {
-			swal({
-				title: 'Input DPT berhasil',
-				type: 'success',
-				timer: 3200,
-				showConfirmButton: false
-				});
-				},10);
-				window.setTimeout(function(){
-					window.location.replace('index.php');
-					},1500);
+$a = mysqli_query($koneksi, $sql);
+$b = mysqli_query($koneksi, $akses);
+
+if ($a && $b) {
+	echo "<script>
+				window.alert('Berhasil Input Data');
+				window.location.replace('upload_dpt.php');
 			</script>";
-    $berhasil++;
+	$berhasil++;
 } else {
-    echo "<script>
-		setTimeout(function () {
-			swal({
-				title: 'Gagal Input',
-				type: 'warning',
-				timer: 3200,
-				showConfirmButton: false
-				});
-				},10);
-				window.setTimeout(function(){
-					window.location.replace('index.php');
-					},1500);
+	echo "<script>
+				window.alert('Gagal Input Data');
+				window.location.replace('upload_dpt.php');
 			</script>";
 }
-?>
