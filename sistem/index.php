@@ -17,7 +17,7 @@ if (isset($_POST['simpan'])) {
   $kode_akses = $_SESSION['kode_akses'];
   $nomor_paslon = $_POST['nomor_paslon'];
 
-  $cek = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM tbl_paslon WHERE kode_akses='$kode_akses'"));
+  $cek = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM tbl_paslon WHERE nim='$nim'"));
   if ($cek > 0) {
     echo "<script>
 		setTimeout(function () {
@@ -34,8 +34,8 @@ if (isset($_POST['simpan'])) {
 			</script>";
   } else {
     mysqli_query($koneksi, "UPDATE tbl_dpt SET status='Sudah Memilih', waktu='$waktu' WHERE nim='$nim'");
-    mysqli_query($koneksi, "INSERT INTO tbl_paslon(kode_akses, nomor_paslon)
-            VALUES ('$kode_akses','$nomor_paslon')");
+    mysqli_query($koneksi, "INSERT INTO tbl_paslon(nim, nomor_paslon)
+            VALUES ('$nim','$nomor_paslon')");
     echo "<script>
 		setTimeout(function () {
 			swal({

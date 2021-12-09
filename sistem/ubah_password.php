@@ -127,7 +127,7 @@ if (!isset($_SESSION["login"])) {
     <script src="assets/js/custom.js"></script>
     <script src="js/main.js"></script>
     <script src="js/sweetalert.min.js"></script>
-    <script>
+    <!-- <script>
         $(document).ready(function() {
             var ses = '<?php echo $_SESSION['ubah_pass'] ?>';
             if (ses != null) {
@@ -140,6 +140,6 @@ if (!isset($_SESSION["login"])) {
                 <?php $_SESSION['ubah_pass'] = null; ?>
             }
         });
-    </script>
+    </script> -->
 </body>
 </html>
